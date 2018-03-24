@@ -1,3 +1,4 @@
 #!/bin/sh
+NODE_BINARY=$(which node)
 
-sudo node node_modules/node-dash-button/bin/findbutton
+sudo $NODE_BINARY node_modules/node-dash-button/bin/findbutton

@@ -4,6 +4,8 @@ services:
   backup-button: 
     image: aegypius/dasher:latest
     build: .
+    network_mode: host
+    restart: always
     environment: 
       BUTTON_NAME: Example button 
       BUTTON_HW_ADDRESS: "00:00:00:00:00"

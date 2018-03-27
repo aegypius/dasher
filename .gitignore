@@ -1,4 +1,7 @@
+docker-compose*
 node_modules
 config/config.json
 *.log
 .DS_Store
+# Allow dist files regardless of gitignore
+!*.dist

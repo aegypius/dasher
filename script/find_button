@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 NODE_BINARY=$(which node)
 
-sudo $NODE_BINARY node_modules/node-dash-button/bin/findbutton
+if [[ $EUID -ne 0 ]]; then
+  NODE_BINARY="sudo $NODE_BINARY"
+fi
+
+$NODE_BINARY node_modules/node-dash-button/bin/findbutton

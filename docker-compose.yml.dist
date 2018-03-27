@@ -1,0 +1,10 @@
+version: '2'
+
+services: 
+  backup-button: 
+    image: aegypius/dasher:latest
+    build: .
+    environment: 
+      BUTTON_NAME: Example button 
+      BUTTON_HW_ADDRESS: "00:00:00:00:00"
+      BUTTON_URL: "https://example.com/url/to/call"
